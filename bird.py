@@ -9,10 +9,10 @@ class Bird:
         self.radius = 20
 
     def jump(self):
-        self.velocity = -5
+        self.velocity = -10
 
     def update(self):
-        self.velocity += 0.25
+        self.velocity += 0.5
         self.y += self.velocity
 
     def draw(self, screen):

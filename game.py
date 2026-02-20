@@ -83,23 +83,23 @@ class Game:
 
         if self.game_active:
             font = pygame.font.Font(None, 50)
-            score_text = font.render(str(self.score), True, constants.WHITE)
+            score_text = font.render(str(self.score), True, constants.BLACK)
             self.screen.blit(score_text, (constants.SCREEN_WIDTH // 2 - 20, 50))
         else:
             font_large = pygame.font.Font(None, 60)
             font_small = pygame.font.Font(None, 30)
 
             if self.score == 0:
-                title_text = font_large.render("Flappy Bird", True, constants.WHITE)
+                title_text = font_large.render("Flappy Bird", True, constants.BLACK)
                 self.screen.blit(title_text, (constants.SCREEN_WIDTH // 2 - 120, constants.SCREEN_HEIGHT // 2 - 50))
-                start_text = font_small.render("Press SPACE to Start", True, constants.WHITE)
+                start_text = font_small.render("Press SPACE to Start", True, constants.BLACK)
                 self.screen.blit(start_text, (constants.SCREEN_WIDTH // 2 - 100, constants.SCREEN_HEIGHT // 2 + 20))
             else:
-                game_over_text = font_large.render("Game Over!", True, constants.WHITE)
+                game_over_text = font_large.render("Game Over!", True, constants.BLACK)
                 self.screen.blit(game_over_text, (constants.SCREEN_WIDTH // 2 - 110, constants.SCREEN_HEIGHT // 2 - 50))
-                score_text = font_small.render(f"Score: {self.score}", True, constants.WHITE)
+                score_text = font_small.render(f"Score: {self.score}", True, constants.BLACK)
                 self.screen.blit(score_text, (constants.SCREEN_WIDTH // 2 - 50, constants.SCREEN_HEIGHT // 2))
-                restart_text = font_small.render("Press SPACE to Restart", True, constants.WHITE)
+                restart_text = font_small.render("Press SPACE to Restart", True, constants.BLACK)
                 self.screen.blit(restart_text, (constants.SCREEN_WIDTH // 2 - 110, constants.SCREEN_HEIGHT // 2 + 50))
 
         pygame.display.flip()

@@ -13,9 +13,9 @@ class Ground:
         self.x2 -= self.speed
 
         if self.x1 <= -const.SCREEN_WIDTH:
-            self.x1 = const.SCREEN_WIDTH
+            self.x1 = self.x2 + const.SCREEN_WIDTH
         if self.x2 <= -const.SCREEN_WIDTH:
-            self.x2 = const.SCREEN_WIDTH
+            self.x2 = self.x1 + const.SCREEN_WIDTH
 
     def draw(self, screen):
         ground_y = const.SCREEN_HEIGHT - self.height
